@@ -1,0 +1,237 @@
+// import React, { useEffect, useState } from "react";
+// import { Link, useNavigate } from "react-router-dom";
+// import style from "./LogIn.module.css";
+// import profile from "../profile.jpeg";
+// // import Header from "../Components/Header/Header";
+
+// function LogIn() {
+//   const navigate = useNavigate();
+//   const initialValues = { name: "", password: "" };
+//   const [formValues, setFormValues] = useState(initialValues);
+//   const [formErrors, setFormErrors] = useState({});
+//   const [isSubmit, setIsSubmit] = useState(false);
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormValues({ ...formValues, [name]: value });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     setFormErrors(validate(formValues));
+//     setIsSubmit(true);
+
+//     const loggedUser = JSON.parse(localStorage.getItem("registeredUserList"));
+//     const found = loggedUser.find(
+//       (user) =>
+//         user.name === formValues.name && user.password === formValues.password
+//     );
+//     if (found) {
+//       alert(Welcome ${found.name});
+//       navigate("../about/About");
+//     } else {
+//       alert("wrong Credentials");
+//     }
+//     navigate('/Home')
+//   };
+
+//   useEffect(() => {
+//     if (Object.keys(formErrors).length === 0 && isSubmit) {
+//     }
+//   }, [formErrors, isSubmit]);
+
+//   const validate = (values) => {
+//     const errors = {};
+//     var inValid = /\s/;
+//     if (inValid.test(values.name)) {
+//       errors.name = "*username name wouldn't have whiteSpace";
+//     } else if (inValid.test(values.email)) {
+//       errors.email = "*email wouldn't have whiteSpace";
+//     } else if (inValid.test(values.password)) {
+//       errors.password = "*password wouldn't have whiteSpace";
+//     }
+
+//     if (!values.name) {
+//       errors.name = "*Username is required!";
+//     }
+
+//     if (!values.password) {
+//       errors.password = "*Password is required";
+//     } else if (values.password.length < 8) {
+//       errors.password = "*Password must be more than 8 characters";
+//     } else if (values.password.length > 10) {
+//       errors.password = "*Password cannot exceed more than 10 characters";
+//     }
+//     return errors;
+//   };
+
+//   return (
+//     <>
+//     {/* <Header/> */}
+//       <form onSubmit={handleSubmit}>
+//         <div className={style.outer}>
+//           {Object.keys(formErrors).length === 0 && isSubmit ? (
+//             <div style={{ color: "green" }}>Signed in successfully</div>
+//           ) : null}
+//           <div className={style.img}>
+//             <div className={style.containerImg}>
+//               <img className={style.profile} src={profile} alt="profile" />
+//             </div>
+//           </div>
+//           <input
+//             className={style.user}
+//             type="text"
+//             name="name"
+//             placeholder="Username"
+//             value={formValues.name}
+//             onChange={handleChange}
+//           />
+//           <p style={{ color: "red" }}>{formErrors.name}</p>
+//           <input
+//             className={style.pass}
+//             type="password"
+//             name="password"
+//             placeholder="Password"
+//             value={formValues.password}
+//             onChange={handleChange}
+//           />
+//           <p style={{ color: "red" }}>{formErrors.password}</p>
+//           <div className={style.btn}>
+//             <p style={{color:"white"}}>
+//               Don't have an account?
+//               <br />
+//               <Link to="/register/Register" style={{color:"blue"}}>Register</Link>
+//             </p>
+//             <button>Login</button>
+//           </div>
+//         </div>
+//       </form>
+//     </>
+//   );
+// }
+
+// export default LogIn;
+
+
+
+
+
+
+// body{
+//     background-color: #f1f3fb;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+
+// }
+
+
+
+// input {
+//     width: 100%;
+//     padding: 12px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     box-sizing: border-box;
+//     margin: 8px 0; 
+// }
+// .ShowPasswordButton {
+//     width: 100%;
+//     background-color: #4CAF50;
+//     color: white;
+//     padding: 14px 20px;
+//     margin: 8px 0;
+//     border: none;
+//     border-radius: 4px;
+//     cursor: pointer;
+// }
+
+// .SignUpButton {
+//     width: 100%;
+//     background-color: #4CAF50;
+//     color: white;
+//     padding: 14px 20px;
+//     margin: 8px 0;
+//     border: none;
+//     border-radius: 4px;
+//     cursor: pointer;
+// } 
+
+
+// .ShowPasswordButton:hover {
+//     background-color: #45a049;
+   
+// }
+
+// .SignUpButton:hover {
+//     background-color: #c50707;
+// }
+
+// @media (max-width: 600px) {
+//     form {
+//         width: 90%;
+//     }
+// }
+
+// @media (min-width: 601px) and (max-width: 800px) {
+//     form {
+//         width: 70%;
+//     }
+// }
+
+// @media (min-width: 801px) {
+//     form {
+//         width: 50%;
+//     }
+// }
+
+// @media (min-width: 601px) {
+//     form {
+//         display: flex;
+//         flex-wrap: wrap;
+//     }
+
+//     label,
+//     input {
+//         width: 100%;
+//     }
+
+//     label {
+//         flex: 0 0 25%;
+//     }
+
+//     input {
+//         flex: 0 0 75%;
+//     }
+// } */
+
+
+
+/* 
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body {
+  background-color: #328f8a;
+  background-image: linear-gradient(45deg,#328f8a,#08ac4b);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.main{
+border: 2px solid black;
+background-color: lightgray;
+box-shadow: 0px 0px 10px 3px lightcyan ;
+display: flex;
+justify-content: space-around;
+text-align: center;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+margin-top: 10rem;
+margin-left: 15rem;
+margin-right: 15rem;
+}
+.input{
+    width: 35rem;
+}

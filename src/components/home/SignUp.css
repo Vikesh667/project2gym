@@ -1,0 +1,93 @@
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 8px 0;
+}
+
+
+.redirection{
+    position: absolute;
+    background: rgb(144,149,235);
+    background: linear-gradient(166deg, rgba(144,149,235,20) 4%, rgba(89,130,209,20) 48%, rgba(62,252,160,20) 70%);
+    font-size: 4em;
+    width: 100%;
+  height: 70vh;
+  opacity: 20;
+  text-align: center;
+  padding-top: 6em;
+}
+
+.SignUpButton {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} */
+
+
+.ShowPasswordButton:hover {
+    background-color: #45a049;
+   
+}
+
+.SignUpButton:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    form {
+        width: 70%;
+    }
+}
+
+@media (min-width: 801px) {
+    form {
+        width: 50%;
+    }
+}
+
+@media (min-width: 601px) {
+    form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    label,
+    input {
+        width: 100%;
+    }
+
+    label {
+        flex: 0 0 25%;
+    }
+
+    input {
+        flex: 0 0 75%;
+    }
+}
