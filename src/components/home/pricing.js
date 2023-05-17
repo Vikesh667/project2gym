@@ -8,15 +8,15 @@ import { useNavigate } from "react-router-dom";
 
 const AppPricing = () => {
   const navigate = useNavigate();
-  const [sub, setSub] = useRecoilState(Data2); // 20
-  const [sub1, setSub1] = useRecoilState(Data3); // 50
-  const [login, setLogin] = useRecoilState(Data); //login
+  const [sub, setSub] = useRecoilState(Data2); 
+  const [sub1, setSub1] = useRecoilState(Data3); 
+  const [login, setLogin] = useRecoilState(Data); 
 
   function confirmation() {
     if (login === true) {
       window.confirm("Press Ok to confirm the plan");
       if (window.confirm("Press Ok to confirm the plan") === true) {
-        // setShow(true);
+      
         setSub(true);
         setLogin(true);
         navigate("/activity");
@@ -31,12 +31,12 @@ const AppPricing = () => {
     }
   }
 
-  // function redirection() {}
+ 
   function confirmationtwo() {
     if (login === true) {
       window.confirm("Press Ok to confirm the plan");
       if (window.confirm("Press Ok to confirm the plan")) {
-        // setShow(true)
+       
         setSub1(true);
 
         setLogin(true);

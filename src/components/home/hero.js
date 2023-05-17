@@ -1,6 +1,6 @@
 import { Button } from "antd";
 import { Carousel } from "antd";
-// import Link from "antd/es/typography/Link";
+
 import { Link } from "react-router-dom";
 import SignUp from "./SignUp";
 

@@ -35,7 +35,7 @@ function SignUp() {
   }
 
   function captUserName(e) {
-    setUserName(e.target.value); //first check e byub makin condition
+    setUserName(e.target.value); 
     const userRegEx = /\s/g;
     if (userRegEx.test(!userName)) {
       setUS("");
@@ -60,7 +60,7 @@ function SignUp() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    //===================email
+    
     function emailExists(email) {
       for (let i = 0; i < data.length; i++) {
         if (data[i].Email === email) {
@@ -116,9 +116,7 @@ function SignUp() {
         <h3>Register</h3>
         <div className="outer">
           <div className="img">
-            {/* <div className='containerImg'> */}
-            {/* <img style={{borderRadius:'60%',height:'auto',width:'30%'}} className='profile' src={profile} alt="profile" />
-            </div> */}
+          
           </div>
           <input
             className="user"

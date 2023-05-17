@@ -14,8 +14,8 @@ function Login() {
   setNewData(false);
   const sub = useRecoilValue(Data2);
   const sub1 = useRecoilValue(Data3);
-  let getData = JSON.parse(localStorage.getItem("userDetails")); // local storage se array achuka
-  console.log(getData, "i am from local"); // data
+  let getData = JSON.parse(localStorage.getItem("userDetails")); 
+  console.log(getData, "i am from local");
 
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -57,9 +57,7 @@ function Login() {
           <h3>Login</h3>
 
           <div className="img">
-            {/* <div className='containerImg'>
-                            <img style={{borderRadius:'60%',height:'auto',width:'30%'}} className='profile' src={profile} alt='profile' /> */}
-            {/* </div> */}
+          
           </div>
           <input
             className="user"
@@ -69,7 +67,7 @@ function Login() {
             value={userName}
             onChange={captUserName}
           />
-          {/* <p style={{ color: "red" }}>{formErrors.username}</p> */}
+         
           <input
             className="pass"
             type="password"
@@ -78,7 +76,7 @@ function Login() {
             value={password}
             onChange={capturePassword}
           />
-          {/* <p style={{ color: "red" }}>{formErrors.password}</p> */}
+        
           <div className="btn">
             <button className="SignUpButton">Login</button>
           </div>
